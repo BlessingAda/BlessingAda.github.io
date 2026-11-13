@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blessing Ozowara | AI Business Analyst</title>
+<meta name="description" content="Blessing Ozowara, AI Business Analyst. Accounting operations, B2B sales and practical AI adoption.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1d1f24;
+    --muted: #5d6470;
+    --line: #e6e2d9;
+    --accent: #0f766e;
+    --accent-soft: #e3f2ef;
+    --code-bg: #f3f1ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121417;
+      --surface: #1a1d21;
+      --text: #ebeae6;
+      --muted: #a2a7b0;
+      --line: #2b2f35;
+      --accent: #4fd1c0;
+      --accent-soft: #17302d;
+      --code-bg: #0e1013;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121417; --surface: #1a1d21; --text: #ebeae6; --muted: #a2a7b0;
+    --line: #2b2f35; --accent: #4fd1c0; --accent-soft: #17302d; --code-bg: #0e1013;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 12px; }
+  nav .brand { font-weight: 700; text-decoration: none; color: var(--text); white-space: nowrap; }
+  nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  nav ul a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+  nav ul a:hover { color: var(--text); }
+
+  header { padding: 72px 0 56px; }
+  .eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 12px; }
+  h1 { font-size: clamp(36px, 7vw, 54px); line-height: 1.1; margin: 0 0 18px; letter-spacing: -.02em; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 0 28px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 8px;
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    border: 1px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: var(--bg); }
+  .btn.ghost { color: var(--accent); }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 24px; letter-spacing: -.01em; }
+  h3 { font-size: 20px; margin: 0 0 4px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+  .tags li { background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+  .card ul.points { padding-left: 20px; margin: 0 0 18px; }
+  .card ul.points li { margin-bottom: 6px; }
+
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 20px; }
+  .stat { border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .stat b { display: block; font-size: 24px; }
+  .stat span { font-size: 13px; color: var(--muted); }
+
+  pre {
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px; overflow-x: auto; font: 13px/1.5 "JetBrains Mono", ui-monospace, monospace;
+    margin: 0 0 18px;
+  }
+  details summary { cursor: pointer; font-weight: 600; color: var(--accent); margin-bottom: 12px; }
+
+  .timeline .job { margin-bottom: 28px; }
+  .timeline .job:last-child { margin-bottom: 0; }
+  .timeline ul { padding-left: 20px; margin: 8px 0 0; }
+
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .skills div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .skills h4 { margin: 0 0 6px; font-size: 15px; }
+  .skills p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  footer { padding: 48px 0 64px; border-top: 1px solid var(--line); }
+  footer p { color: var(--muted); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 14px; }
+    nav ul li.hide-sm { display: none; }
+    header { padding: 48px 0 40px; }
+    .card { padding: 20px; }
+    .stats { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Blessing Ozowara</a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li class="hide-sm"><a href="#experience">Experience</a></li>
+      <li class="hide-sm"><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header>
+    <p class="eyebrow">AI Business Analyst · Greater Toronto Area</p>
+    <h1>I help finance and sales teams put AI to practical use.</h1>
+    <p class="lead">
+      Economics graduate with nearly 4 years in accounting operations and B2B sales,
+      and 3+ years using ChatGPT and Claude at work. I understand the day-to-day
+      work from the inside, and I explain AI in plain language.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="https://github.com/BlessingAda">GitHub</a>
+    </div>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="card">
+      <h3>Payment Reconciliation &amp; AR Aging Tool</h3>
+      <p class="meta">Personal project · 2026 · Python, SQL · Built with Claude Code</p>
+      <ul class="tags"><li>Python</li><li>SQL</li><li>Accounts Receivable</li><li>Automation</li></ul>
+      <p>
+        As a Revenue Analyst at Kyosk Digital, I checked every day that shop payments
+        matched the right invoices and followed up on overdue accounts. I built this tool
+        to show how that work can be automated, using made-up sample data.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>94%</b><span>of payments matched automatically</span></div>
+        <div class="stat"><b>5</b><span>aging buckets, from current to 90+ days</span></div>
+        <div class="stat"><b>6</b><span>automated tests, all passing</span></div>
+      </div>
+      <ul class="points">
+        <li><strong>Matches payments to invoices</strong> by invoice number, or by shop name and exact amount when the number is missing.</li>
+        <li><strong>Labels each invoice</strong> as paid, part-paid or unpaid.</li>
+        <li><strong>Builds an aging report</strong> and SQL queries that rank which shops to call first.</li>
+        <li><strong>Flags unmatched payments</strong> with a reason, so a person only reviews the problems.</li>
+      </ul>
+      <details>
+        <summary>See sample output</summary>
+<pre>PAYMENT RECONCILIATION SUMMARY (as of 2025-12-15)
+================================================
+Invoices:            40
+Payments received:   32  (30 matched, 94% match rate)
+Total invoiced:      KES      475,150
+Total collected:     KES      348,000  (73%)
+Outstanding:         KES      127,150
+
+Accounts receivable aging
+  1-30 days          KES     36,250
+  31-60 days         KES     27,850
+  61-90 days         KES     63,050</pre>
+      </details>
+      <div class="buttons">
+        <a class="btn primary" href="https://github.com/BlessingAda/payment-reconciliation-tool">View on GitHub</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>AI Coaching for Coworkers and Community</h3>
+      <p class="meta">Workplace and church community group · 2023 – present</p>
+      <ul class="tags"><li>AI Training</li><li>ChatGPT</li><li>Claude</li><li>Change Management</li></ul>
+      <p>
+        I teach coworkers and community members, most of them non-technical, how to use
+        ChatGPT and Claude for their own everyday tasks.
+      </p>
+      <ul class="points">
+        <li>Show people how to use AI for research, writing, outreach and Excel formulas.</li>
+        <li>Explain AI in plain language, without technical words.</li>
+        <li>Teach people to check AI's answers, because it can get facts and numbers wrong.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="job">
+        <h3>Business Development Representative</h3>
+        <p class="meta">Peninsula Canada · January 2026 – present</p>
+        <ul>
+          <li>Own a B2B sales pipeline end to end, with 60–80 outbound calls and structured discovery calls.</li>
+          <li>Hit 100% of monthly outreach and pipeline targets, and rank in the team's top 10 for meetings booked.</li>
+          <li>Reduced drop-off during account handoffs by 18% through clear Salesforce documentation.</li>
+          <li>Use Claude and ChatGPT for pre-call research, call practice and drafting outreach.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Revenue Analyst</h3>
+        <p class="meta">Kyosk Digital Services · January 2023 – December 2025</p>
+        <ul>
+          <li>Verified that payments for supplied goods were recorded correctly, with a 100% compliance rate.</li>
+          <li>Ran daily bank and receipt reconciliation and journal entries in SAP ERP.</li>
+          <li>Worked with accounts receivable to follow up on overdue payments, reducing overdue accounts by 10%.</li>
+          <li>Managed a portfolio of 50+ accounts across finance, operations and supply chain.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h4>AI and Automation</h4><p>ChatGPT, Claude, Claude Code, prompt writing, AI training, workflow mapping, Zapier</p></div>
+      <div><h4>Accounting</h4><p>Reconciliation, invoicing, journal entries, accounts receivable, revenue assurance</p></div>
+      <div><h4>Sales and Clients</h4><p>Discovery calls, pipeline management, B2B sales, stakeholder management</p></div>
+      <div><h4>Tools</h4><p>SAP, QuickBooks, Salesforce, HubSpot, Excel, SQL, Python, Power BI, Tableau</p></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education and Certifications</h2>
+    <ul>
+      <li>BSc Economics, Covenant University</li>
+      <li>Google Data Analytics Professional Certificate, Coursera</li>
+      <li>Python Professional Certificate, NIIT</li>
+      <li>Anthropic AI Course, Anthropic Academy (in progress)</li>
+    </ul>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>Open to AI Business Analyst roles, remote across Canada or in the Greater Toronto Area.</p>
+    <div class="buttons">
+      <a class="btn primary" href="mailto:ozowarablessingada@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://github.com/BlessingAda">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
